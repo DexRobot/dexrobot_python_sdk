@@ -1,93 +1,114 @@
-# dexrobot_python_sdk
+# DexRobot Python SDK
 
+A comprehensive software development kit for robotic hand control, simulation, and manipulation. This project provides a complete stack for working with dexterous robotic hands, from low-level hardware control to high-level simulation and planning.
 
+## Project Components
 
-## Getting started
+### 1. pyzlg_dexhand
+Low-level hardware interface and control library for the DexHand robotic system.
+- Hardware communication via USB-CAN interface
+- Protocol implementation for hand control
+- ROS integration examples
+- Visualization tools
+- Comprehensive testing suite
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### 2. dexrobot_kinematics
+Kinematics library for robotic hand systems.
+- Forward and inverse kinematics for hand configurations
+- Support for both left and right hand variants
+- Utilities for transformation and visualization
+- Type-safe implementation with comprehensive testing
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### 3. dexrobot_isaac
+Isaac Sim integration and simulation environment.
+- Complex scene creation and simulation
+- Integration with OpenAI Gym-style environments
+- Support for various manipulation tasks
+- Reinforcement learning infrastructure
+- Pre-built assets and environments:
+  - Robotic hand models
+  - Furniture and object models
+  - Scene compositions
+  - Training configurations
 
-## Add your files
+### 4. dexrobot_urdf
+URDF (Unified Robot Description Format) models and utilities.
+- Complete URDF descriptions for DexHand
+- Mesh files for visualization and collision
+- Utilities for URDF manipulation and analysis
+- Both detailed and simplified hand models
+- CAD exports in STEP format
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### 5. dexrobot_mujoco
+MuJoCo simulation environment and utilities.
+- MuJoCo XML models for the DexHand
+- Scene creation tools
+- Real-time visualization
+- Physics-based simulation
+- Integration with ROS
+- Rich set of demo environments and furniture models
 
-```
-cd existing_repo
-git remote add origin http://192.168.1.31/all/dexrobot_python_sdk.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](http://192.168.1.31/all/dexrobot_python_sdk/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### 6. ros_compat
+ROS compatibility layer for platform-independent development.
+- Abstract interface for ROS functionality
+- Logging utilities
+- Time handling
+- Node implementation
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Each component can be installed independently using pip:
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+```bash
+# Install individual components
+pip install ./pyzlg_dexhand
+pip install ./dexrobot_kinematics
+pip install ./dexrobot_isaac
+pip install ./dexrobot_urdf
+pip install ./dexrobot_mujoco
+pip install ./ros_compat
+```
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## Dependencies
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- Python 3.6+
+- ROS (optional, for ROS integration)
+- MuJoCo (for physics simulation)
+- Isaac Sim (for advanced simulation)
+- USB-CAN adapter (for hardware control)
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+## Documentation
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Each component contains its own documentation in the `docs` directory. The documentation can be built using Sphinx:
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+```bash
+cd <component_directory>
+sphinx-build docs docs/_build
+```
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Each component may have its own license. Please refer to the LICENSE file in each component directory.
+
+## Project Structure
+
+```
+dexrobot_python_sdk/
+├── pyzlg_dexhand/      # Hardware interface
+├── dexrobot_kinematics/ # Kinematics library
+├── dexrobot_isaac/     # Isaac Sim integration
+├── dexrobot_urdf/      # Robot description files
+├── dexrobot_mujoco/    # MuJoCo simulation
+└── ros_compat/         # ROS compatibility layer
+```
+
+## Contributing
+
+Please refer to individual component READMEs for specific contribution guidelines.
+
+## Support
+
+For issues and support:
+- Hardware issues: Check pyzlg_dexhand documentation
+- Simulation issues: Refer to dexrobot_isaac or dexrobot_mujoco
+- Kinematics questions: See dexrobot_kinematics documentation
