@@ -1,18 +1,18 @@
 [submodule "pyzlg_dexhand"]
 	path = pyzlg_dexhand
-	url = git@192.168.1.31:all/pyzlg_dexhand.git
+	url = git@github.com:DexRobot/pyzlg_dexhand.git
 [submodule "dexrobot_urdf"]
 	path = dexrobot_urdf
-	url = git@192.168.1.31:all/dexrobot_urdf.git
+	url = git@github.com:DexRobot/dexrobot_urdf.git
 [submodule "dexrobot_kinematics"]
 	path = dexrobot_kinematics
-	url = git@192.168.1.31:all/dexrobot_kinematics.git
+	url = git@github.com:DexRobot/dexrobot_kinematics.git
 [submodule "ros_compat"]
 	path = ros_compat
-	url = git@192.168.1.31:all/ros_compat.git
+	url = git@github.com:DexRobot/ros_compat.git
 [submodule "dexrobot_mujoco"]
 	path = dexrobot_mujoco
-	url = git@192.168.1.31:all/dexrobot_mujoco.git
+	url = git@github.com:DexRobot/dexrobot_mujoco.git
 [submodule "dexrobot_isaac"]
 	path = dexrobot_isaac
-	url = git@192.168.1.31:all/dexrobot_isaac.git
+	url = git@github.com:DexRobot/dexrobot_isaac.git
