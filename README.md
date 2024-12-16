@@ -2,6 +2,23 @@
 
 A comprehensive software development kit for robotic hand control, simulation, and manipulation. This project provides a complete stack for working with dexterous robotic hands, from low-level hardware control to high-level simulation and planning.
 
+## Getting Started
+
+1. Make sure you have Git LFS installed:
+
+```bash
+sudo apt install git-lfs      # For Ubuntu, for example
+git lfs install
+```
+
+2. Clone the repository:
+
+```bash
+git clone --recursive https://github.com/DexRobot/dexrobot_python_sdk.git
+```
+
+Make sure you have the `--recursive` flag turned on, so that all the submodules can be loaded. Alternatively, you can clone the submodules you need individually.
+
 ## Project Components
 
 ### 1. pyzlg_dexhand
