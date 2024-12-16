@@ -4,7 +4,6 @@ on:
   push:
     branches: ["main"]
 
-# 权限
 permissions:
   contents: write
 
@@ -13,7 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: 'recursive'  # 添加这一行来递归克隆子模块
+        fetch-depth: 0  # 获取完整历史以确保子模块正确克隆
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -28,7 +31,6 @@ jobs:
     - name: Build Sphinx documentation
       run: |
         sphinx-build -b html docs build
-        # 创建 .nojekyll 文件以允许下划线开头的文件夹
         touch build/.nojekyll
     
     - name: Deploy to GitHub Pages
