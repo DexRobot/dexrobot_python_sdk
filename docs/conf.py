@@ -3,7 +3,7 @@ project = 'DexRobot Python SDK'
 copyright = '2024, DexRobot'
 author = 'DexRobot'
 
-autodoc_mock_imports = ["rclpy", "std_msgs", "std_srvs", "sensor_msgs"]
+autodoc_mock_imports = ["*"]
 
 extensions = [
     'sphinx.ext.autodoc',
