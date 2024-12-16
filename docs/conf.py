@@ -3,6 +3,8 @@ project = 'DexRobot Python SDK'
 copyright = '2024, DexRobot'
 author = 'DexRobot'
 
+autodoc_mock_imports = ["rclpy", "std_msgs", "std_srvs", "sensor_msgs"]
+
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',  # Support for Google/NumPy style docstrings
