@@ -1,0 +1,40 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: 'recursive'  # 添加这一行来递归克隆子模块
+        fetch-depth: 0  # 获取完整历史以确保子模块正确克隆
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.12
+    
+    - name: Install dependencies
+      run: |
+        pip install -e .
+        pip install -e .[docs]
+ 
+    - name: Build Sphinx documentation
+      run: |
+        sphinx-build -b html docs build
+        touch build/.nojekyll
+    
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages
+        folder: build
