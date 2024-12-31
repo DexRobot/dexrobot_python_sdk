@@ -14,7 +14,7 @@ git lfs install
 2. Clone the repository:
 
 ```bash
-git clone --recursive https://github.com/DexRobot/dexrobot_python_sdk.git
+git clone --recursive https://gitee.com/DexRobot/dexrobot_python_sdk.git
 ```
 
 Make sure you have the `--recursive` flag turned on, so that all the submodules can be loaded. Alternatively, you can clone the submodules you need individually.
@@ -22,7 +22,9 @@ Make sure you have the `--recursive` flag turned on, so that all the submodules 
 ## Project Components
 
 ### 1. pyzlg_dexhand
+
 Low-level hardware interface and control library for the DexHand robotic system.
+
 - Hardware communication via USB-CAN interface
 - Protocol implementation for hand control
 - ROS integration examples
@@ -30,14 +32,18 @@ Low-level hardware interface and control library for the DexHand robotic system.
 - Comprehensive testing suite
 
 ### 2. dexrobot_kinematics
+
 Kinematics library for robotic hand systems.
+
 - Forward and inverse kinematics for hand configurations
 - Support for both left and right hand variants
 - Utilities for transformation and visualization
 - Type-safe implementation with comprehensive testing
 
 ### 3. dexrobot_isaac
+
 Isaac Sim integration and simulation environment.
+
 - Complex scene creation and simulation
 - Integration with OpenAI Gym-style environments
 - Support for various manipulation tasks
@@ -49,7 +55,9 @@ Isaac Sim integration and simulation environment.
   - Training configurations
 
 ### 4. dexrobot_urdf
+
 URDF (Unified Robot Description Format) models and utilities.
+
 - Complete URDF descriptions for DexHand
 - Mesh files for visualization and collision
 - Utilities for URDF manipulation and analysis
@@ -57,7 +65,9 @@ URDF (Unified Robot Description Format) models and utilities.
 - CAD exports in STEP format
 
 ### 5. dexrobot_mujoco
+
 MuJoCo simulation environment and utilities.
+
 - MuJoCo XML models for the DexHand
 - Scene creation tools
 - Real-time visualization
@@ -66,7 +76,9 @@ MuJoCo simulation environment and utilities.
 - Rich set of demo environments and furniture models
 
 ### 6. ros_compat
+
 ROS compatibility layer for platform-independent development.
+
 - Abstract interface for ROS functionality
 - Logging utilities
 - Time handling
@@ -74,17 +86,7 @@ ROS compatibility layer for platform-independent development.
 
 ## Installation
 
-Each component can be installed independently using pip:
-
-```bash
-# Install individual components
-pip install ./pyzlg_dexhand
-pip install ./dexrobot_kinematics
-pip install ./dexrobot_isaac
-pip install ./dexrobot_urdf
-pip install ./dexrobot_mujoco
-pip install ./ros_compat
-```
+Please refer to the guides in the individual submodules.
 
 ## Dependencies
 
@@ -96,16 +98,11 @@ pip install ./ros_compat
 
 ## Documentation
 
-Each component contains its own documentation in the `docs` directory. The documentation can be built using Sphinx:
-
-```bash
-cd <component_directory>
-sphinx-build docs docs/_build
-```
+Please refer to the [online documentation](https://dexrobot.github.io/dexrobot_python_sdk/).
 
 ## License
 
-Each component may have its own license. Please refer to the LICENSE file in each component directory.
+The project is licensed under the Apache License, Version 2.0.
 
 ## Project Structure
 
@@ -126,6 +123,7 @@ Please refer to individual component READMEs for specific contribution guideline
 ## Support
 
 For issues and support:
+
 - Hardware issues: Check pyzlg_dexhand documentation
 - Simulation issues: Refer to dexrobot_isaac or dexrobot_mujoco
 - Kinematics questions: See dexrobot_kinematics documentation
