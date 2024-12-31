@@ -1,18 +1,18 @@
 [submodule "pyzlg_dexhand"]
 	path = pyzlg_dexhand
-	url = https://github.com/DexRobot/pyzlg_dexhand.git
+	url = https://gitee.com/DexRobot/pyzlg_dexhand.git
 [submodule "dexrobot_urdf"]
 	path = dexrobot_urdf
-	url = https://github.com/DexRobot/dexrobot_urdf.git
+	url = https://gitee.com/DexRobot/dexrobot_urdf.git
 [submodule "dexrobot_kinematics"]
 	path = dexrobot_kinematics
-	url = https://github.com/DexRobot/dexrobot_kinematics.git
+	url = https://gitee.com/DexRobot/dexrobot_kinematics.git
 [submodule "ros_compat"]
 	path = ros_compat
-	url = https://github.com/DexRobot/ros_compat.git
+	url = https://gitee.com/DexRobot/ros_compat.git
 [submodule "dexrobot_mujoco"]
 	path = dexrobot_mujoco
-	url = https://github.com/DexRobot/dexrobot_mujoco.git
+	url = https://gitee.com/DexRobot/dexrobot_mujoco.git
 [submodule "dexrobot_isaac"]
 	path = dexrobot_isaac
-	url = https://github.com/DexRobot/dexrobot_isaac.git
+	url = https://gitee.com/DexRobot/dexrobot_isaac.git
