@@ -1,7 +1,7 @@
 DexRobot Python SDK Documentation
 ==================================
 
-A comprehensive software development kit for robotic hand control, simulation, and manipulation. This project provides a complete stack for working with dexterous robotic hands, from low-level hardware control to high-level simulation and planning.
+A software development kit for the control and simulation of the DexRobot dexterous hands.
 
 .. toctree::
    :maxdepth: 2
@@ -11,9 +11,9 @@ A comprehensive software development kit for robotic hand control, simulation, a
    :maxdepth: 2
    :caption: Component Documentation
 
-   components/ros_compat/index
    components/pyzlg_dexhand/index
    components/dexrobot_urdf/index
+   components/ros_compat/index
 
 Getting Started
 ----------------
@@ -25,7 +25,7 @@ Getting Started
 
 2. Clone the repository::
 
-    git clone --recursive https://github.com/DexRobot/dexrobot_python_sdk.git
+    git clone --recursive https://gitee.com/DexRobot/dexrobot_python_sdk.git
 
 .. note::
    Make sure you have the ``--recursive`` flag turned on, so that all the submodules can be loaded. Alternatively, you can clone the submodules you need individually.
@@ -99,15 +99,7 @@ ROS compatibility layer for platform-independent development.
 Installation
 -------------
 
-Each component can be installed independently using pip::
-
-    # Install individual components
-    pip install ./pyzlg_dexhand
-    pip install ./dexrobot_kinematics
-    pip install ./dexrobot_isaac
-    pip install ./dexrobot_urdf
-    pip install ./dexrobot_mujoco
-    pip install ./ros_compat
+Please refer to the guides in the individual submodules.
 
 Dependencies
 -------------
